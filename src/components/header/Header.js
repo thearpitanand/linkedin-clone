@@ -1,4 +1,5 @@
-import "../styles/Header.css";
+// CSS
+import "../../styles/header/Header.css";
 
 // Icons
 import SearchIcon from "@material-ui/icons/Search";
@@ -28,7 +29,10 @@ const Header = () => {
         <HeaderOption Icon={BusinessCenter} title="Jobs" />
         <HeaderOption Icon={Chat} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notification" />
-        <HeaderOption avatar="https://media-exp1.licdn.com/dms/image/C4E03AQEVVphnmICMIQ/profile-displayphoto-shrink_800_800/0/1597674671926?e=1628121600&v=beta&t=a3KZrJlWJkxSH1mbR4XNDsqqMGwCr1Tf9j-5inJKb94" title="Me" />
+        <HeaderOption
+          avatar="https://media-exp1.licdn.com/dms/image/C4E03AQEVVphnmICMIQ/profile-displayphoto-shrink_800_800/0/1597674671926?e=1628121600&v=beta&t=a3KZrJlWJkxSH1mbR4XNDsqqMGwCr1Tf9j-5inJKb94"
+          title="Me"
+        />
       </div>
     </div>
   );
