@@ -2,9 +2,11 @@
   position: sticky;
   top: 80px;
   flex: 0.2;
+  margin-top: 10px;
   border-radius: 10px;
   text-align: center;
   height: fit-content;
+  /* z-index: 0; */
 }
 .sidebar__avatar {
   margin-bottom: 10px;

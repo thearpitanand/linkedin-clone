@@ -1,6 +1,7 @@
 import "./App.css";
 
 // Components
+import Feed from "./components/Feed/Feed";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
 
@@ -14,6 +15,7 @@ const App = () => {
         {/* Sidebar */}
         <Sidebar />
         {/* Feed */}
+        <Feed />
         {/* Widgets */}
       </div>
     </div>
