@@ -108,8 +108,8 @@
   margin-top: 10px;
 }
 
-.sidebar__buttonGroupTitle{
-    color: cadetblue;
+.sidebar__buttonGroupTitle {
+  color: cadetblue;
 }
 
 .sidebar__group {
@@ -130,8 +130,8 @@
 }
 
 .sidebar__group:hover {
-    background-color: whitesmoke;
-    border-radius: 10px;
-    cursor: pointer;
-    color: black;
-  }
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+}

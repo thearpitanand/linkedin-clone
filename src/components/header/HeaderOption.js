@@ -1,5 +1,8 @@
-import { Avatar } from "@material-ui/core";
+// CSS
 import "../../styles/header/HeaderOption.css";
+
+// Material UI Icon
+import { Avatar } from "@material-ui/core";
 
 const HeaderOption = ({ avatar, Icon, title, onClick }) => {
   return (

@@ -48,6 +48,7 @@ const Feed = () => {
 
   const sendPost = (e) => {
     e.preventDefault();
+    if (input.length === 0) return alert("Enter something in the post..");
     db.collection("posts").add({
       name: user.displayName,
       description: user.email,

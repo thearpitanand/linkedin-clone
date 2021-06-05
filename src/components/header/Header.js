@@ -14,8 +14,12 @@ import {
 
 // Components
 import HeaderOption from "./HeaderOption";
+
+// Redux
 import { useDispatch, useSelector } from "react-redux";
 import { logout, selectUser } from "../../features/userSlice";
+
+// Firebase
 import { auth } from "../../firebase";
 
 const Header = () => {

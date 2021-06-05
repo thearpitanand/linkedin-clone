@@ -1,5 +1,10 @@
 import { useEffect } from "react";
+
+// Redux
 import { useDispatch, useSelector } from "react-redux";
+import { login, logout, selectUser } from "./features/userSlice";
+
+// CSS
 import "./App.css";
 
 // Components
@@ -8,7 +13,8 @@ import Header from "./components/header/Header";
 import Login from "./components/Login/Login";
 import Sidebar from "./components/sidebar/Sidebar";
 import Widgets from "./components/widgets/Widgets";
-import { login, logout, selectUser } from "./features/userSlice";
+
+// Firebase
 import { auth } from "./firebase";
 
 const App = () => {

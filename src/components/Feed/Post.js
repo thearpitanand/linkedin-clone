@@ -1,3 +1,6 @@
+import React, { forwardRef } from "react";
+
+// Material UI Icon
 import { Avatar } from "@material-ui/core";
 import {
   ChatOutlined,
@@ -5,11 +8,11 @@ import {
   ShareOutlined,
   ThumbUpSharp,
 } from "@material-ui/icons";
-import React, { forwardRef } from "react";
 
 // CSS
 import "../../styles/Feed/Post.css";
 
+// Components
 import InputOption from "./InputOption";
 
 const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {

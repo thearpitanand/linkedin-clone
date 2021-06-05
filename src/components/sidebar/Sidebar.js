@@ -1,9 +1,15 @@
+import React from "react";
+
+// CSS
+import "../../styles/sidebar/Sidebar.css";
+
+// Material UI Icon
 import { Avatar } from "@material-ui/core";
 import GroupIcon from "@material-ui/icons/Group";
-import React from "react";
+
+// Redux
 import { useSelector } from "react-redux";
 import { selectUser } from "../../features/userSlice";
-import "../../styles/sidebar/Sidebar.css";
 
 const Sidebar = () => {
   const user = useSelector(selectUser);
@@ -25,7 +31,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar__top">
         <img
-          src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+          src="https://images.unsplash.com/photo-1622830608403-95bcbb22fa87?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
           alt=""
         />
         <Avatar
