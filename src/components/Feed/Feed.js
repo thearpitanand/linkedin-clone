@@ -9,6 +9,7 @@ import {
   Create,
   EventNote,
   Image,
+  PostAdd,
   Subscriptions,
 } from "@material-ui/icons";
 
@@ -73,6 +74,12 @@ const Feed = () => {
           </form>
         </div>
         <div className="feed__inputOptions">
+          <InputOption
+            onClick={sendPost}
+            Icon={PostAdd}
+            title="Post"
+            color="#ac66cc"
+          />
           <InputOption Icon={Image} title="Photo" color="#70B5F9" />
           <InputOption Icon={Subscriptions} title="Video" color="#E7A33E" />
           <InputOption Icon={EventNote} title="Event" color="#C0CBCD" />

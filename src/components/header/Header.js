@@ -5,7 +5,12 @@ import "../../styles/header/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import HomeIcon from "@material-ui/icons/Home";
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
-import { BusinessCenter, Chat, Notifications } from "@material-ui/icons";
+import {
+  BusinessCenter,
+  Chat,
+  ExitToApp,
+  Notifications,
+} from "@material-ui/icons";
 
 // Components
 import HeaderOption from "./HeaderOption";
@@ -21,7 +26,7 @@ const Header = () => {
     auth.signOut();
   };
   return (
-    <div className="header">
+    <div className="header" style={{ display: !user ? "none" : "" }}>
       <div className="header__left">
         <img
           src="https://image.flaticon.com/icons/png/512/174/174857.png"
@@ -47,7 +52,11 @@ const Header = () => {
               : ""
           }
           title="Me"
+        />
+        <HeaderOption
+          Icon={ExitToApp}
           onClick={logoutFromApp}
+          title="Log Out"
         />
       </div>
     </div>

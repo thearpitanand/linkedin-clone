@@ -3,7 +3,6 @@ import {
   ChatOutlined,
   SendOutlined,
   ShareOutlined,
-  ThumbsUpDownOutlined,
   ThumbUpSharp,
 } from "@material-ui/icons";
 import React, { forwardRef } from "react";

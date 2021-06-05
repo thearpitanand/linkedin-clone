@@ -14,6 +14,7 @@ import { auth } from "./firebase";
 const App = () => {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
+
   useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
@@ -32,6 +33,7 @@ const App = () => {
       }
     });
   }, []);
+
   return (
     <div className="app">
       <Header />
