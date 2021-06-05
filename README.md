@@ -16,9 +16,14 @@
 LinkedIn is an American business and employment-oriented online service that operates via websites and mobile apps. Launched on May 5, 2003, the platform is mainly used for professional networking, and allows job seekers to post their CVs and employers to post jobs.
 
 <!-- Screenshot -->
-<div align="center">
-    <img src="/public/website-screenshot.png" width="500px"</img> 
-</div>
+
+#### Login Screen
+
+![Login Screenshot](/public/website-screenshot-login.png)
+
+#### User Panel
+
+![Screenshot](/public/website-screenshot.png)
 
 [Linked In Clone (Link)](https://linkedin-clone-thearpitanand.netlify.app/)
 
