@@ -1,6 +1,8 @@
 .feed {
   flex: 0.6;
-  margin: 10px;
+  /* margin: 10px; */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .feed__inputContainer {
   background-color: white;
@@ -38,4 +40,3 @@
   display: flex;
   justify-content: space-evenly;
 }
-

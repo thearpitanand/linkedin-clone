@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+// React-Flip-Move
+import FlipMove from "react-flip-move";
+
 // Icons
 import {
   CalendarViewDay,
@@ -20,7 +23,12 @@ import "../../styles/Feed/Feed.css";
 import { db } from "../../firebase";
 import firebase from "firebase";
 
+// Redux
+import { selectUser } from "../../features/userSlice";
+import { useSelector } from "react-redux";
+
 const Feed = () => {
+  const user = useSelector(selectUser);
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
@@ -40,11 +48,10 @@ const Feed = () => {
   const sendPost = (e) => {
     e.preventDefault();
     db.collection("posts").add({
-      name: "Arpit Anand",
-      description: "Full Stack Developer",
+      name: user.displayName,
+      description: user.email,
       message: input,
-      photoUrl:
-        "https://media-exp1.licdn.com/dms/image/C4E03AQEVVphnmICMIQ/profile-displayphoto-shrink_800_800/0/1597674671926?e=1628121600&v=beta&t=a3KZrJlWJkxSH1mbR4XNDsqqMGwCr1Tf9j-5inJKb94",
+      photoUrl: user.photoUrl || "",
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
     setInput("");
@@ -78,15 +85,17 @@ const Feed = () => {
       </div>
 
       {/* Post */}
-      {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
-        <Post
-          key={id}
-          name={name}
-          description={description}
-          message={message}
-          photoUrl={photoUrl}
-        />
-      ))}
+      <FlipMove>
+        {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+          <Post
+            key={id}
+            name={name}
+            description={description}
+            message={message}
+            photoUrl={!!photoUrl ? photoUrl : name[0]}
+          />
+        ))}
+      </FlipMove>
     </div>
   );
 };

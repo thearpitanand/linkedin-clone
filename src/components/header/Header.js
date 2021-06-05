@@ -9,8 +9,17 @@ import { BusinessCenter, Chat, Notifications } from "@material-ui/icons";
 
 // Components
 import HeaderOption from "./HeaderOption";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, selectUser } from "../../features/userSlice";
+import { auth } from "../../firebase";
 
 const Header = () => {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+  const logoutFromApp = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
   return (
     <div className="header">
       <div className="header__left">
@@ -20,7 +29,7 @@ const Header = () => {
         />
         <div className="header__search">
           <SearchIcon />
-          <input type="text" />
+          <input placeholder="Search" type="text" />
         </div>
       </div>
       <div className="header__right">
@@ -30,8 +39,15 @@ const Header = () => {
         <HeaderOption Icon={Chat} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notification" />
         <HeaderOption
-          avatar="https://media-exp1.licdn.com/dms/image/C4E03AQEVVphnmICMIQ/profile-displayphoto-shrink_800_800/0/1597674671926?e=1628121600&v=beta&t=a3KZrJlWJkxSH1mbR4XNDsqqMGwCr1Tf9j-5inJKb94"
+          avatar={
+            !!user
+              ? !!user.photoUrl
+                ? user.photoUrl
+                : user.displayName[0]
+              : ""
+          }
           title="Me"
+          onClick={logoutFromApp}
         />
       </div>
     </div>
